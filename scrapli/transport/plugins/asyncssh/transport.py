@@ -216,7 +216,7 @@ class AsyncsshTransport(AsyncTransport):
             self._verify_key_value()
 
         self.stdin, self.stdout, _ = await self.session.open_session(
-            term_type="xterm", encoding=None
+            term_type="dumb", encoding=None
         )
 
         self._post_open_closing_log(closing=False)
